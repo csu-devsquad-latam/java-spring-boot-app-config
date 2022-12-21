@@ -15,11 +15,14 @@
       "NODE_VERSION": "none"
     }
   },
-  "workspaceFolder": "/workspaces",
+  "workspaceFolder": "/workspaces/java-spring-boot-app-config",
 
   //Define ENV Vars for your dev environment
   //"containerEnv": {
-  //  "KUBECONFIG": ""
+  //},
+
+  //set variables for VS Code and related sub-processes
+  //"remoteEnv": {
   //},
 
   // Configure tool-specific properties.
