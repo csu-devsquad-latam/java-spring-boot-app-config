@@ -7,3 +7,7 @@ build-test:
 	clear
 	echo "Build and test"
 	mvn clean package
+
+run-local:
+	spring_profiles_active=local \
+	mvn spring-boot:run
