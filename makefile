@@ -11,3 +11,7 @@ build-test:
 run-local:
 	spring_profiles_active=local \
 	mvn spring-boot:run
+
+run-local-appconfig:
+	spring_profiles_active=local-appconfig \
+	mvn spring-boot:run
