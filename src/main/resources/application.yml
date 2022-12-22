@@ -1,0 +1,7 @@
+server:
+  servlet:
+    context-path: /
+
+hello-controller:
+  message: Mundo-default
+  another-message: test-default
