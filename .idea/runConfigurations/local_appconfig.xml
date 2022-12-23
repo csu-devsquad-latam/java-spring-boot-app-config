@@ -1,0 +1,18 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="local appconfig" type="Application" factoryName="Application">
+    <envs>
+      <env name="spring_profiles_active" value="local-appconfig" />
+    </envs>
+    <option name="MAIN_CLASS_NAME" value="com.devsquad.springboot.appconfig.AppApplication" />
+    <module name="azure-appconfig-testing" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.devsquad.springboot.appconfig.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="local" type="Application" factoryName="Application">
+    <envs>
+      <env name="spring_profiles_active" value="local APP_CONFIG_URI= APP_CONFIG_FILTER_KEY= APP_CONFIG_FILTER_LABEL=" />
+    </envs>
+    <option name="MAIN_CLASS_NAME" value="com.devsquad.springboot.appconfig.AppApplication" />
+    <module name="azure-appconfig-testing" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
