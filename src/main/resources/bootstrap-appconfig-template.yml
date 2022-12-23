@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    azure:
+      appconfiguration:
+        enabled: true
+        stores:
+          - connection-string: <set your app configuration connection string>
+            selects:
+              - key-filter: '<app filter>:'
+                label-filter: '<app versions>'
+      keyvault:
+        enabled: true
+        secret:
+          property-sources:
+            - endpoint: https://<key-vault-name>.vault.azure.net
+              profile:
+                tenant-id: <tenant-id>
+              credential:
+                client-id: <client-id>
+                client-secret: <secret>
+                managed-identity-enabled: false
