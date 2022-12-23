@@ -1,2 +1,3 @@
 hello-controller:
   message: Mundo-local
+  some-secret: "a secret"

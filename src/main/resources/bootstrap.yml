@@ -10,3 +10,7 @@ spring:
                 label-filter: '${APP_CONFIG_FILTER_LABEL}'
         credential:
           managed-identity-enabled: true
+
+appConfiguration:
+  #valid values: DEFAULT | ENVIRONMENT
+  azureCredentialsMethod: DEFAULT

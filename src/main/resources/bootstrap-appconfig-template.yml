@@ -4,18 +4,7 @@ spring:
       appconfiguration:
         enabled: true
         stores:
-          - connection-string: <set your app configuration connection string>
+          - endpoint: <set your app configuration url https://service-name.azconfig.io>
             selects:
               - key-filter: '<app filter>:'
                 label-filter: '<app versions>'
-      keyvault:
-        enabled: true
-        secret:
-          property-sources:
-            - endpoint: https://<key-vault-name>.vault.azure.net
-              profile:
-                tenant-id: <tenant-id>
-              credential:
-                client-id: <client-id>
-                client-secret: <secret>
-                managed-identity-enabled: false
