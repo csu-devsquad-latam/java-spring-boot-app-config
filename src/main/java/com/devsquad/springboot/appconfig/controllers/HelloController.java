@@ -14,12 +14,15 @@ public class HelloController {
 	@Value("${hello-controller.another-message}")
 	private String anotherMessage;
 
+	@Value("${hello-controller.some-secret}")
+	private String someSecret;
+
 	@Autowired
 	public HelloController() {
 	}
 
 	@GetMapping(value = "/hello", produces = "application/json")
 	public ResponseEntity<String> getHelloMessage() {
-		return ResponseEntity.ok().body(String.format("{\"hello\":\"%s - %s\"}", message, anotherMessage));
+		return ResponseEntity.ok().body(String.format("{\"hello\":\"%s - %s secret: %s \"}", message, anotherMessage, someSecret));
 	}
 }
