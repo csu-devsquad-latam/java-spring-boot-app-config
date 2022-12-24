@@ -2,16 +2,16 @@ package com.devsquad.springboot.appconfig;
 
 import com.azure.core.credential.TokenCredential;
 import com.azure.identity.EnvironmentCredentialBuilder;
+import com.azure.identity.DefaultAzureCredentialBuilder;
 import com.azure.spring.cloud.config.AppConfigurationCredentialProvider;
 import com.azure.spring.cloud.config.KeyVaultCredentialProvider;
-import com.azure.identity.DefaultAzureCredentialBuilder;
 
 public class AzureCredentials implements KeyVaultCredentialProvider, AppConfigurationCredentialProvider {
 
     private AzureCredentialsMethod azureCredentialsMethod;
     private TokenCredential tokenCredential;
 
-    public AzureCredentials(AzureCredentialsMethod azureCredentialsMethod){
+    public AzureCredentials(AzureCredentialsMethod azureCredentialsMethod) {
         this.azureCredentialsMethod = azureCredentialsMethod;
     }
 
