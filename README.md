@@ -57,3 +57,18 @@ Change the values on the `bootstrap-local-appconfig.yml`
 ``` bash
 make run-local-appconfig
 ```
+
+### Working with secrets
+
+One of the biggest advantages of using App Configuration is the possibility to use reference to a Azure KeyVault Secret
+, allowing to use one instance of the Azure App Configuration referencing many others Key Vaults. The
+advantage of using this approach is that the reference is just a URI that points to a Key, meaning that 
+the application need to perform another HTTP GET to retrieve the actually value of the secret. 
+
+There are some setup that is necessary to perform in order to use the the `azure-spring-cloud-appconfiguration-config` library
+
+1. Setup an [App Configuration Class](./src/main/java/com/devsquad/springboot/appconfig/AppConfiguration.java)
+
+    1.1. Setup an [Azure Credentials Class](./src/main/java/com/devsquad/springboot/appconfig/AzureCredentials.java) with the method you want to use, check [Azure Identity Examples](https://github.com/Azure/azure-sdk-for-java/wiki/Azure-Identity-Examples)
+2. Create a [spring.factories](./src/main/resources/META-INF/spring.factories) at `/resources/META-INF`
+3. Update/Create the configuration using the [template](./src/main/resources/bootstrap-appconfig-template.yml)
